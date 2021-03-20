@@ -1,4 +1,4 @@
-# compute-instance
+# terraform-gcp-compute-instance
 
 Create GCP compute instance.
 
@@ -14,7 +14,7 @@ resource "google_service_account" "test_server_service_account" {
 }
 
 module "test_server" {
-  source          = ""
+  source          = "tinslice/compute-instance/gcp"
 
   name            = "test-server"
   resource_prefix = "dev"         # if defined, it will prefix the name of created resources with the specified value
